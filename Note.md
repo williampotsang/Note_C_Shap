@@ -54,7 +54,11 @@
 -------------------------------------------------------
 # Multi-thread / Timer
 [談談C#中各種執行緒的使用及注意項~](https://codingnote.cc/zh-tw/p/118004/)
+> * 封裝一個執行緒類進行函數和參數的傳遞
+> * C#中timer類的用法
+
 [C# Timer(3種)](https://ithelp.ithome.com.tw/articles/10195452?sc=rss.qu)
+
 [[C#.NET][Thread] 執行緒定時器](https://www.dotblogs.com.tw/yc421206/2011/01/30/21141)
 > * System.Timers.Timer
 > * System.Threading.Timer
