@@ -12,6 +12,7 @@
 ### 玩轉C#之【委派和事件】
 > [委派的宣告、實體化和使用] (https://hackmd.io/@IsHlp74-TK6Gg5UC4REAEw/ry3zuJi6L)
 
-> []()
+### 今天要介紹的是C#的委派 Delegate
+> [本篇開始會依序從C#的發展順序介紹委派 Delegate、Anonymous Function、Lambda Expression、Func<>、Action<>](http://death0400.blogspot.com/2018/01/c-delegate.html)
 
 
