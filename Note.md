@@ -1,5 +1,5 @@
-
-## Deleigation ##
+-------------------------------------------------------
+# Deleigation #
 > 委派: 我們可以發現--再相似的流程中把不同的邏輯抽出來就是委派的精隨。
 > > Delegate的發展由函數指標(funtion pointer)而來，可以說Delegate是函數指標中的語法糖(Syntactic sugar)也不為過
 > 
@@ -8,7 +8,10 @@
 > 泛型: Action<>與Func<T,TRESULT>
 > 
 
-#### 程式人生
+### 利用事件傳遞數據 
+> 待補
+
+### 程式人生
 > [C# 委託(delegate)和事件(event)詳解](https://www.796t.com/content/1548166147.html)
 > 
 > [快速理解C#中的委託與事件](https://www.796t.com/content/1549107564.html)
@@ -28,8 +31,8 @@
 > [本篇開始會依序從C#的發展順序介紹委派 Delegate、Anonymous Function、Lambda Expression、Func<>、Action<>](http://death0400.blogspot.com/2018/01/c-delegate.html)
 
 
-
-## 對控制項進行安全線程呼叫
+-------------------------------------------------------
+# 對控制項進行安全線程呼叫
 ### Invoke & BeginInvoke
 > [淺談Invoke 和 BegionInvoke的用法](https://iter01.com/427335.html)
 > 
@@ -43,3 +46,12 @@
 > [如何 Windows Forms .net) 對控制項進行安全線程呼叫](https://learn.microsoft.com/zh-tw/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls?view=netdesktop-6.0&source=recommendations)
 > 
 > [跨執行緒存取UI](https://www.ez2o.com/Blog/Post/csharp-Cross-Thread-Call-Object)
+
+-------------------------------------------------------
+# Multi-thread / Timer
+[[C#.NET][Thread] 執行緒定時器](https://www.dotblogs.com.tw/yc421206/2011/01/30/21141)
+> * System.Timers.Timer
+> * System.Threading.Timer
+> * System.Windows.Forms.Timer
+> 
+[[讀書筆記] Threading in C# - PART 3: USING THREADS](https://ithelp.ithome.com.tw/articles/10254641)
