@@ -1,12 +1,11 @@
 
-### Deleigation ###
+## Deleigation ##
 > 委派: 我們可以發現--再相似的流程中把不同的邏輯抽出來就是委派的精隨。
 > > Delegate的發展由函數指標(funtion pointer)而來，可以說Delegate是函數指標中的語法糖(Syntactic sugar)也不為過
 > 
 > 事件: 可以把一堆可變的動作/行為封裝出去，交給第三方指定
 >
 > 泛型: Action<>與Func<T,TRESULT>
-> 
 > 
 
 #### 程式人生
@@ -28,4 +27,14 @@
 ### 今天要介紹的是C#的委派 Delegate
 > [本篇開始會依序從C#的發展順序介紹委派 Delegate、Anonymous Function、Lambda Expression、Func<>、Action<>](http://death0400.blogspot.com/2018/01/c-delegate.html)
 
+### Invoke & BeginInvoke
+> [淺談Invoke 和 BegionInvoke的用法](https://iter01.com/427335.html)
+> 
+> [【分析】浅谈C#中Control的Invoke与BeginInvoke在主副线程中的执行顺序和区别（SamWang）](https://www.cnblogs.com/wangshenhe/archive/2012/05/25/2516842.html)
 
+
+## 對控制項進行安全線程呼叫
+### 對控制項進行安全線程呼叫
+> [如何 Windows Forms .net) 對控制項進行安全線程呼叫](https://learn.microsoft.com/zh-tw/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls?view=netdesktop-6.0&source=recommendations)
+> c
+> []()
