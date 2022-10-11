@@ -41,5 +41,5 @@
 
 ### 對控制項進行安全線程呼叫
 > [如何 Windows Forms .net) 對控制項進行安全線程呼叫](https://learn.microsoft.com/zh-tw/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls?view=netdesktop-6.0&source=recommendations)
-> c
-> []()
+> 
+> [跨執行緒存取UI](https://www.ez2o.com/Blog/Post/csharp-Cross-Thread-Call-Object)
