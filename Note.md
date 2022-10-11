@@ -33,6 +33,10 @@
 
 -------------------------------------------------------
 # 對控制項進行安全線程呼叫
+### 原理
+[舊文重發：Windows 表單與多執行緒](https://www.huanlintalk.com/2009/01/windows.html)
+> 在撰寫多執行緒的 Windows 表單應用程式時，有一項必須特別注意的規則，就是不可以在工作執行緒（worker thread）當中修改表單或控制項的屬性與方法。本文說明這項規則的由來，以及違反此規則將造成的後果，同時示範錯誤的以及正確的程式撰寫方式。
+
 ### Invoke & BeginInvoke
 > [淺談Invoke 和 BegionInvoke的用法](https://iter01.com/427335.html)
 > 
@@ -49,6 +53,8 @@
 
 -------------------------------------------------------
 # Multi-thread / Timer
+[談談C#中各種執行緒的使用及注意項~](https://codingnote.cc/zh-tw/p/118004/)
+[C# Timer(3種)](https://ithelp.ithome.com.tw/articles/10195452?sc=rss.qu)
 [[C#.NET][Thread] 執行緒定時器](https://www.dotblogs.com.tw/yc421206/2011/01/30/21141)
 > * System.Timers.Timer
 > * System.Threading.Timer
