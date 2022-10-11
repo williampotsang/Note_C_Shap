@@ -27,13 +27,18 @@
 ### 今天要介紹的是C#的委派 Delegate
 > [本篇開始會依序從C#的發展順序介紹委派 Delegate、Anonymous Function、Lambda Expression、Func<>、Action<>](http://death0400.blogspot.com/2018/01/c-delegate.html)
 
+
+
+## 對控制項進行安全線程呼叫
 ### Invoke & BeginInvoke
 > [淺談Invoke 和 BegionInvoke的用法](https://iter01.com/427335.html)
 > 
 > [【分析】浅谈C#中Control的Invoke与BeginInvoke在主副线程中的执行顺序和区别（SamWang）](https://www.cnblogs.com/wangshenhe/archive/2012/05/25/2516842.html)
+> > * Control.Invoke 方法 (Delegate) :在拥有此控件的基础窗口句柄的线程上执行指定的委托。
+> > * Control.BeginInvoke 方法 (Delegate) :在创建控件的基础句柄所在线程上异步执行指定委托。
+> > * Control的Invoke和BeginInvoke的委托方法是在主线程，即UI线程上执行。（也就是说如果你的委托方法用来取花费时间长的数据，然后更新界面什么的，千万别在主线程上调用Control.Invoke和Control.BeginInvoke，因为这些是依然阻塞UI线程的，造成界面的假死）
+> > * Invoke会阻塞主支线程，BeginInvoke只会阻塞主线程，不会阻塞支线程！因此BeginInvoke的异步执行是指相对于支线程异步，而不是相对于主线程异步。（从最后一个例子就能看出，程序运行点击button1）
 
-
-## 對控制項進行安全線程呼叫
 ### 對控制項進行安全線程呼叫
 > [如何 Windows Forms .net) 對控制項進行安全線程呼叫](https://learn.microsoft.com/zh-tw/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls?view=netdesktop-6.0&source=recommendations)
 > c
