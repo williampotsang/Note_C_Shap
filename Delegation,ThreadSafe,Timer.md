@@ -16,6 +16,9 @@
 > [C# 3.0 Lambda 表示式](https://ithelp.ithome.com.tw/articles/10228322)
 >
 > [現成委派類 - Func <T> 與 Action <T>](https://ithelp.ithome.com.tw/articles/10228657)
+> 現成委派類 - Func與Action
+> *Action - 接受沒有回傳值的void方法
+> *Func - 接受有回傳值的方法
 
 
 ### 利用事件傳遞數據 
