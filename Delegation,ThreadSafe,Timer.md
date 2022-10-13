@@ -8,6 +8,10 @@
 > 泛型: Action<>與Func<T,TRESULT>
 > 
 
+[C#知識點講解之C#delegate、event、Action、EventHandler的使用和區別](https://www.twblogs.net/a/5eaf373086ec4d604917cf06)
+
+
+
 ### IT鐵人賽 - 我要轉職成 C# / .NET 工程師 - 委派 
 > [委派 C#1.0](https://ithelp.ithome.com.tw/articles/10227783)
 > 
