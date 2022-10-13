@@ -8,6 +8,14 @@
 > 泛型: Action<>與Func<T,TRESULT>
 > 
 
+### IT鐵人賽 - 我要轉職成 C# / .NET 工程師 - 委派 
+> [委派 C#1.0](https://ithelp.ithome.com.tw/articles/10227783)
+> 
+> [委派 C# 2.0 與 匿名函式](https://ithelp.ithome.com.tw/articles/10227971)
+> 
+> [C# 3.0 Lambda 表示式](https://ithelp.ithome.com.tw/articles/10228322)
+
+
 ### 利用事件傳遞數據 
 > [C# 事件(下) – 加上event關鍵字](https://ithelp.ithome.com.tw/articles/10228906)
 > 但是委派要能讓外部客戶訂閱，就要能被外部使用，所以委派也有可能被外部執行而送出意料之外的通知。
