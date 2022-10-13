@@ -14,6 +14,8 @@
 > [委派 C# 2.0 與 匿名函式](https://ithelp.ithome.com.tw/articles/10227971)
 > 
 > [C# 3.0 Lambda 表示式](https://ithelp.ithome.com.tw/articles/10228322)
+>
+> [現成委派類 - Func <T> 與 Action <T>](https://ithelp.ithome.com.tw/articles/10228657)
 
 
 ### 利用事件傳遞數據 
