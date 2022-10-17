@@ -7,6 +7,9 @@
 >
 > 泛型: Action<>與Func<T,TRESULT>
 > 
+> 現成委派類 - Func與Action:
+> > 在.NET Framework 3.5類別庫(與C#3.0一同推出)已經透過泛型定義好委派類別讓我們直接使用，減少我們額外的宣告委派的動作。
+> > 而這些定義好的泛型delegate類別就是今天要講的 Func 與 Action。
 
 [C#知識點講解之C#delegate、event、Action、EventHandler的使用和區別](https://www.twblogs.net/a/5eaf373086ec4d604917cf06)
 
