@@ -91,22 +91,43 @@
 
 ### 讀書筆記
 > [[讀書筆記] Threading in C# - PART 1: GETTING STARTED](https://ithelp.ithome.com.tw/articles/10254045)
-> > 如果要做RealTime的應用程式且包含使用者介面, 通常會拆開來, 使用者介面一個程式、後端運算是另一個程式, 彼此溝通用Remoting(WCF, Web Api之類)或memory-mapped files (C# in a Nutshell 有提到!! 沒用過~~)
-> 
-> [[讀書筆記] Threading in C# - PART 2: BASIC SYNCHRONIZATION](https://ithelp.ithome.com.tw/articles/10254640)
+> > 如果要做RealTime的應用程式且包含使用者介面, 通常會拆開來, 使用者介面一個程式、後端運算是另一個程式, 彼此溝通用Remoting(WCF, Web Api之類)或memory-mapped files (C# in a Nutshell 有提到!! 沒用過~~)  
 >
-> [[讀書筆記] Threading in C# - PART 3: USING THREADS](https://ithelp.ithome.com.tw/articles/10254641)
+> [[讀書筆記] Threading in C# - PART 2: BASIC SYNCHRONIZATION](https://ithelp.ithome.com.tw/articles/10254640)  
+> [[讀書筆記] Threading in C# - PART 3: USING THREADS](https://ithelp.ithome.com.tw/articles/10254641)  
 
  ### Backgroundworker與Thread的區別
-> [台部落-線程封裝組件(BackgroundWorker)和線程(Thread)](https://www.twblogs.net/a/5f0211f8d33e2533b014f8e5)
-> 兩種方式的coding比對
-> * BackgroundWorker是微軟的在.net Framwork中添加的一個組件，主要對線程的訪問提供了一種安全的方式。簡單的說就是對Thread的一次封裝。
-> > 微軟官方的解釋爲：Executes an operation on a separate thread.就是說，開始一個新的線程執行操作。
-> > BackgroundWorker是在內部使用了線程池的技術；同時，在Winform或WPF編碼中，它還給工作線程和UI線程提供了交互的能力。
->
-> * Thread的使用就比較麻煩了，對於尤其是對異步提醒來說，需要寫委託，代碼量是很多
-> * *總結* 當你執行的任務較簡單,不需要複雜控制時使用BackgroundWorker,較為方便;當你要執行的任務需要複雜控制(如執行緒同步)時,要自己 建立執行緒。畢竟，如果我們要實用多個執行緒，還需要往表單中加好幾個BackgroundWorker控制元件。
+> [台部落-線程封裝組件(BackgroundWorker)和線程(Thread)](https://www.twblogs.net/a/5f0211f8d33e2533b014f8e5)  
+> > 兩種方式的coding比對  
+> > * BackgroundWorker是微軟的在.net Framwork中添加的一個組件，主要對線程的訪問提供了一種安全的方式。簡單的說就是對Thread的一次封裝。  
+> > 微軟官方的解釋爲：Executes an operation on a separate thread.就是說，開始一個新的線程執行操作。  
+> > BackgroundWorker是在內部使用了線程池的技術；同時，在Winform或WPF編碼中，它還給工作線程和UI線程提供了交互的能力。  
+> > * Thread的使用就比較麻煩了，對於尤其是對異步提醒來說，需要寫委託，代碼量是很多  
+> > * *總結* 當你執行的任務較簡單,不需要複雜控制時使用BackgroundWorker,較為方便;當你要執行的任務需要複雜控制(如執行緒同步)時,要自己 建立執行緒。畢竟，如果我們要實用多個執行緒，還需要往表單中加好幾個BackgroundWorker控制元件。
 
 > [C#中Backgroundworker與Thread的區別](https://www.it145.com/9/183227.html)
   
   
+### Flier's Csharp Notes - 多執行緒/非同步
+> [建議使用ThreadPool或BackgroundWorker代替Thread](https://sites.google.com/site/flierscsharpnotes/home/duo-zhi-xing-xu-fei-tong-bu/thread/jian-yi-shi-yongthreadpool-huobackgroundworker-dai-tithread)  
+> 線程的時間開銷來自：  
+> 1）線程創建的時候，系統相繼初始化以上這些內存空間。  
+> 2）接著CLR會調用所有加載DLL的DLLMain方法，並傳遞連接標誌（線程終止的時候，也會調用DLL的DLLMain方法，並傳遞分離標誌）。  
+> 3）線程上下文切換。一個系統中會加載很多的進程，而一個進程又包含若干個線程。但是一個CPU在任何時候都只能有一個線程在執行。為了讓每個線程看上去都在運行，系統會不斷地切換「線程上下文」：每個線程大概得到幾十毫秒的執行時間片，然後就會切換到下一個線程了。  
+
+> [正確的暫停Thread](https://sites.google.com/site/flierscsharpnotes/home/duo-zhi-xing-xu-fei-tong-bu/thread/zheng-que-de-zan-tingthread)  
+> [Main]   AutoResetEvent e = new AutoResetEvent(false);    
+> [Thread] e.WaitOne();     	// 這行會讓 Thread 執行到這時停下來等 e 被觸發才繼續    
+> [Main]   e.Set();   	    	// 觸發 e 這個 event，就可以讓 worker thread 開始活動
+> [Thread] DoWork();    	// e 被觸發後會繼續執行到這，開始真正進行工作    
+
+> [正確的跨執行續存取UI](https://sites.google.com/site/flierscsharpnotes/home/duo-zhi-xing-xu-fei-tong-bu/thread/zheng-que-de-kua-zhi-xing-xu-cun-quui)
+> 透過委派的方式存取，這是比較正規的作法
+
+> [如何使 控制項 不閃爍](https://sites.google.com/site/flierscsharpnotes/home/ru-he-shi-kong-zhi-xiang-bu-shan-shuo)  
+> DoubleBuffered=true
+
+> [將事件驅動 (event-driven) 的模式改為可等候的方法 (awaitable method)](https://sites.google.com/site/flierscsharpnotes/home/jiang-shi-jian-qu-dong-event-driven-de-mo-shi-gai-wei-ke-deng-hou-de-fang-fa-awaitable-method)  
+> .Net 4.5 新增了 async 與 await 這兩個保留字。若於 method 前加註 async，代表這個方法是可等候的方法 (awaitable method)。至此，已大大地改變了過去須撰寫冗長程式碼的非同步模式。微軟官方，針對將可能會需要耗費大量時間的 API (如檔案讀寫、網路傳輸)，也新增了相對應的 awaitable method。
+
+
