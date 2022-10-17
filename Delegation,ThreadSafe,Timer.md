@@ -89,5 +89,18 @@
 > * System.Threading.Timer
 > * System.Windows.Forms.Timer
 
-
 > [[讀書筆記] Threading in C# - PART 3: USING THREADS](https://ithelp.ithome.com.tw/articles/10254641)
+
+ ### Backgroundworker與Thread的區別
+> [台部落-線程封裝組件(BackgroundWorker)和線程(Thread)](https://www.twblogs.net/a/5f0211f8d33e2533b014f8e5)
+> 兩種方式的coding比對
+> * BackgroundWorker是微軟的在.net Framwork中添加的一個組件，主要對線程的訪問提供了一種安全的方式。簡單的說就是對Thread的一次封裝。
+> > 微軟官方的解釋爲：Executes an operation on a separate thread.就是說，開始一個新的線程執行操作。
+> > BackgroundWorker是在內部使用了線程池的技術；同時，在Winform或WPF編碼中，它還給工作線程和UI線程提供了交互的能力。
+>
+> * Thread的使用就比較麻煩了，對於尤其是對異步提醒來說，需要寫委託，代碼量是很多
+> * *總結* 當你執行的任務較簡單,不需要複雜控制時使用BackgroundWorker,較為方便;當你要執行的任務需要複雜控制(如執行緒同步)時,要自己 建立執行緒。畢竟，如果我們要實用多個執行緒，還需要往表單中加好幾個BackgroundWorker控制元件。
+
+> [C#中Backgroundworker與Thread的區別](https://www.it145.com/9/183227.html)
+  
+  
