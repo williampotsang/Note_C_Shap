@@ -89,6 +89,12 @@
 > * System.Threading.Timer
 > * System.Windows.Forms.Timer
 
+### 讀書筆記
+> [[讀書筆記] Threading in C# - PART 1: GETTING STARTED](https://ithelp.ithome.com.tw/articles/10254045)
+> > 如果要做RealTime的應用程式且包含使用者介面, 通常會拆開來, 使用者介面一個程式、後端運算是另一個程式, 彼此溝通用Remoting(WCF, Web Api之類)或memory-mapped files (C# in a Nutshell 有提到!! 沒用過~~)
+> 
+> [[讀書筆記] Threading in C# - PART 2: BASIC SYNCHRONIZATION](https://ithelp.ithome.com.tw/articles/10254640)
+>
 > [[讀書筆記] Threading in C# - PART 3: USING THREADS](https://ithelp.ithome.com.tw/articles/10254641)
 
  ### Backgroundworker與Thread的區別
