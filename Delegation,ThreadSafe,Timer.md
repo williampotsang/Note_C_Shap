@@ -75,7 +75,13 @@
 > [如何 Windows Forms .net) 對控制項進行安全線程呼叫](https://learn.microsoft.com/zh-tw/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls?view=netdesktop-6.0&source=recommendations)
 > 
 > [跨執行緒存取UI](https://www.ez2o.com/Blog/Post/csharp-Cross-Thread-Call-Object)
-
+>
+>[ 正確的跨執行續存取UI](https://sites.google.com/site/flierscsharpnotes/home/duo-zhi-xing-xu-fei-tong-bu/thread/zheng-que-de-kua-zhi-xing-xu-cun-quui)
+> 透過委派的方式存取，這是比較正規的作法
+>
+> [如何使 控制項 不閃爍](https://sites.google.com/site/flierscsharpnotes/home/ru-he-shi-kong-zhi-xiang-bu-shan-shuo)
+> DoubleBuffered=true
+ 
 -------------------------------------------------------
 # Multi-thread / Timer
 > [談談C#中各種執行緒的使用及注意項~](https://codingnote.cc/zh-tw/p/118004/)
@@ -141,3 +147,15 @@
 > Task.Run 是在 dotnet framework 4.5 之后才可以使用，但是 Task.Factory.StartNew 可以使用比 Task.Run 更多的参数，可以做到更多的定制。
 > 可以认为 Task.Run 是简化的 Task.Factory.StartNew 的使用，除了需要指定一个线程是长时间占用的，否则就使用 Task.Run
 > 两个函数最大的不同在于 Task.Factory.StartNew 可以设置线程是长时间运行，这时线程池就不会等待这个线程回收
+
+> [高併發系統系列-多執行緒中順序 by EventWaitHandle](https://isdaniel.github.io/multithread-eventwaithandle/) 
+ 
+ -------------------------------------------------------
+> [C# 學習筆記：多執行緒 (6) - TPL](https://www.huanlintalk.com/2013/06/csharp-notes-multithreading-6-tpl.html) 
+>
+> [iT 邦幫忙鐵人賽 - 深入探索LINQ 系列](https://ithelp.ithome.com.tw/users/20107789/ironman/1574)
+>
+> [LINQ寫法：類SQL查詢語法 vs 方法串接](https://blog.darkthread.net/blog/linq-sql-query-vs-methods/)
+ 
+
+
