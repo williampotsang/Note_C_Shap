@@ -130,4 +130,14 @@
 > [將事件驅動 (event-driven) 的模式改為可等候的方法 (awaitable method)](https://sites.google.com/site/flierscsharpnotes/home/jiang-shi-jian-qu-dong-event-driven-de-mo-shi-gai-wei-ke-deng-hou-de-fang-fa-awaitable-method)  
 > .Net 4.5 新增了 async 與 await 這兩個保留字。若於 method 前加註 async，代表這個方法是可等候的方法 (awaitable method)。至此，已大大地改變了過去須撰寫冗長程式碼的非同步模式。微軟官方，針對將可能會需要耗費大量時間的 API (如檔案讀寫、網路傳輸)，也新增了相對應的 awaitable method。
 
+ 
+### Task Parallel Library
+> [[.NET] Task.Run 與 Task.Factory.StartNew](https://marcus116.blogspot.com/2019/02/net-taskrun-taskfactorystartnew.html)
+> 在 .NET 4.0 的時代，可以透過 Task.Factory.StartNew 靜態方法啟用或建立一個新的任務，此靜態方法提供開發者自行定義建立新的 task 任務處理機制
+> 在 .NET 4.5 提供了 Task.Run 方法，不需要使用這麼多參數讓開發者在使用上更為方便，實際上 Task.Run 是根據 Task.Factory.StartNew 相同邏輯實現，將 Action 帶入其他參數帶入預設值
+> > 如果有簡單的任務需求，可以透過 Task.Run 來達成你的需求，使用 Thread Pool 預設的機制來處理新增的 Task 任務 ( TaskScheduler.Default )，也可以說 Task.Run 是 Task.Factory.StartNew 安全參數的縮寫。
 
+> [C# Task.Run 和 Task.Factory.StartNew 区别](https://lindexi.gitee.io/post/C-Task.Run-%E5%92%8C-Task.Factory.StartNew-%E5%8C%BA%E5%88%AB.html)
+> Task.Run 是在 dotnet framework 4.5 之后才可以使用，但是 Task.Factory.StartNew 可以使用比 Task.Run 更多的参数，可以做到更多的定制。
+> 可以认为 Task.Run 是简化的 Task.Factory.StartNew 的使用，除了需要指定一个线程是长时间占用的，否则就使用 Task.Run
+> 两个函数最大的不同在于 Task.Factory.StartNew 可以设置线程是长时间运行，这时线程池就不会等待这个线程回收
